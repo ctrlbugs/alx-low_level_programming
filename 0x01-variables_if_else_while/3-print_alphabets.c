@@ -5,22 +5,14 @@
  * Return: Always 0 (Success)
  */
 int main(void)
+{
+	char ch;
+	char CH;
 
-{
-	char l;
-	char j;
-	l = 'a';
-	j = 'A';
-	while (l <= 'z')
-{
-	putchar(l);
-	l++;
-}
-        while (j <= 'Z')
-{
-	putchar(j);
-	j++;
-}
-        putchar('\n');
+	for (ch = 'a'; ch <= 'z'; ch++)
+		putchar(ch);
+	for (CH = 'A'; CH <= 'Z'; CH++)
+		putchar(CH);
+	putchar('\n');
 	return (0);
 }
