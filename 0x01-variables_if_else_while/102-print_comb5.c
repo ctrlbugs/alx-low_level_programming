@@ -7,43 +7,24 @@
  */
 int main(void)
 {
-	int i, e, g, h, op1, op2;
+	int num1, num2;
 
-	i = e = g = h = 48;
-	while (h < 58)
+	for (num1 = 0; num1 <= 98; num1++)
 	{
-		g = 48;
-		while (g < 58)
+		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
-			e = 48;
-			while (e < 58)
-			{
-				i = 48;
-				while (i < 58)
-				{
-					op1 = (h * 10) + g;
-					op2 = (e * 10) + i;
-					if (op1 < op2)
-					{
-						putchar(h);
-						putchar(g);
-						putchar(' ');
-						putchar(e);
-						putchar(i);
-						if (h == 57 && g == 56 && e == 57 && i == 57)
-						{
-							break;
-						}
-						putchar(',');
-						putchar(' ');
-					}
-					i++;
-				}
-				e++;
-			}
-			g++;
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+
+			if (num1 == 98 && num2 == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
-		h++;
 	}
 	putchar('\n');
 	return (0);
