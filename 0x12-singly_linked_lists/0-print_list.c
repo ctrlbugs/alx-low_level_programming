@@ -2,14 +2,14 @@
 /**
  * print_list - prints all the elements of a list_t list.
  * @h: singly linked list.
- * Return: The number of nodes.
+ * Return: number of elements in the list.
  */
 
 size_t print_list(const list_t *h)
 {
-	size_t elem;
+	size_t nelem;
 
-	elem = 0;
+	nelem = 0;
 	while (h != NULL)
 	{
 		if (h->str == NULL)
@@ -17,7 +17,7 @@ size_t print_list(const list_t *h)
 		else
 			printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
-		elem++;
+		nelem++;
 	}
-	return (elem);
+	return (nelem);
 }
